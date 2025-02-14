@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Presentase Cinta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes move {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .animate-move {
+            animation: move 3s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('https://storage.googleapis.com/a1aa/image/_5w0_jMsYfc6ms4qZCJu5NKH_YDyEe4lg9r2EXPIDpg.jpg') no-repeat center center;
+            background-size: cover;
+            animation: float 3s infinite;
+        }
+        .heart:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        .heart:nth-child(3) {
+            animation-delay: 1s;
+        }
+        .heart:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+        .heart:nth-child(5) {
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 relative overflow-hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center relative z-10">
+        <img class="mb-4 mx-auto animate-move" alt="A shiny red heart illustration with a glossy effect" height="150" src="https://storage.googleapis.com/a1aa/image/_5w0_jMsYfc6ms4qZCJu5NKH_YDyEe4lg9r2EXPIDpg.jpg" width="150"/>
+        <table class="table-auto w-full mt-4">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 text-xl font-bold text-red-600">Presentase Cantik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2 text-2xl font-bold text-red-600">
+                        <div class="relative pt-1">
+                            <div class="flex mb-2 items-center justify-center">
+                                <div>
+                                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-red-600 bg-red-200">
+                                        100%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
+                                <div style="width:100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="heart" style="left: 50%;"></div>
+    <div class="heart" style="left: 60%;"></div>
+    <div class="heart" style="left: 40%;"></div>
+    <div class="heart" style="left: 70%;"></div>
+    <div class="heart" style="left: 30%;"></div>
+</body>
+</html>
